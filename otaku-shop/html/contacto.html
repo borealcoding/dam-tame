@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Joshua Rojas, Pedro Artero, Fabrice Rodríguez, Eduardo Ruá"/>
+        <meta name="description" content="online shop"/>
+        <meta name="copyright" content="Otaku-Shop"/>
+        <meta name="language" content="es"/>
+    
+        <title>Otaku-Shop | Contacto</title>
+        <link rel="stylesheet" href="../css/style_web_responsive.css"/>
+        <link rel="icon" href="../img/logo/logo-ico.ico"/>
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img id="logo" src="../img/logo/logo_letra_largo.png">
+            </a>
+            <nav>
+                <a href="#" id="menu-icon"></a>
+                <ul id="nav-list">
+                    <li><a href="index.html">Novedades</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="#" class="current">Contacto</a></li>
+                    <input id="busqueda" type="search" placeholder="¿Qué buscas?">		
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <img id="banner" src="../img/banner/banner.png">
+            <section>
+                <h1>Contáctanos</h1><hr id="separator"/>
+                <br/>
+                <p>Si deseas ponerte en contacto con nosotros, aquí puedes dejarnos tus datos y la consulta que tengas:</p>
+                <form action="" method="POST" id="formulario" name="formulario">
+                    <!-- radio buttons -->
+                    <p>Tratamiento:</p>
+                    <input type="radio" id="masculino" name="genero" value="masculino">
+                    <label for="masculino">Sr</label> <br>
+                    <input type="radio" id="femenino" name="genero" value="femenino">
+                    <label for="femenino">Sra</label> <br><br>
+                    <!-- inputs -->
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="fnombre" placeholder="Aquí su nombre" required><br><br>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="fapellidos" placeholder="Aquí sus apellidos" required><br><br>
+                    <label for="correo">E-mail:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@gmail.com" required><br><br>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" id="telefono" name="ftelefono" placeholder="xxx xxx xxx" required><br><br>
+                    <!-- select list -->
+                    <label for="consulta">Consulta:</label>
+                    <select name="consultas" id="consultas" required>
+                        <option value="" disabled>Selecciona una consulta</option>
+                        <option value="dudas">Dudas</option>
+                        <option value="productos">Productos</option>
+                        <option value="pedidos">Pedidos</option>
+                        <option value="devoluciones">Devoluciones/Reembolsos</option>
+                        <option value="tallas">Tallaje</option>
+                    </select><br><br>
+                    <!-- textarea -->
+                    <label for="asunto">Asunto de consulta:</label><br>
+                    <textarea name="asunto" rows="10" cols="30" placeholder="Escribe tu duda" required></textarea> <br><br>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpiar">
+                </form>
+                <h2>Nuestra ubicación y contacto empresarial</h2>
+                <address>
+                    OTAKU-SHOP S.L.<br/>
+                    Rusafa, 3 - 7<br/>
+                    46000 - Valencia<br/>
+                    España<br/>
+                    Teléfono: +34 709 548 781<br/>
+                    Fax: +34 203 514 233
+                </address><br/>
+                <iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.1868171570427!2d-0.3761199847097029!3d39.465108079487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6048b5605695b7%3A0x6062bde4fddb5aa!2sCalle%20de%20Ruzafa%2C%20Valencia!5e0!3m2!1ses!2ses!4v1605191466246!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </section>
+        </main>
+        <footer>
+            <br/>
+            <details>
+                <summary>&copy; 2020  Otaku-Shop</summary>
+                <p id="copyright">Todos los derechos reservados. <br/>
+                    Este producto está protegido por derechos de autor y se distribuye bajo licencias que restringen la copia, distribución y descompilación.
+                </p>
+            </details>
+        </footer>    
+    </body>
+</html>

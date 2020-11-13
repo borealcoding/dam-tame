@@ -1,0 +1,133 @@
+/* ----- RESET ----- */
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
+
+/* ----- GENERAL ----- */
+body{
+    font-size: 1.05em;
+    line-height: 1.25em;
+    font-family: "Helvetica Neue", Helvetica, Arial; /* "Helvetica Neue" entre comillas al incluir más de una palabra. NO puede ponerse HelveticaNeue, al haber espacio se añade el texto entre comillas*/
+    background: whitesmoke;
+    color: rgb(0, 0, 0);
+}
+a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover{color: darkred;}
+section{
+    margin: 80px auto 40px;
+    max-width: 980px;
+    position: relative;
+    /* padding: 20px; */
+}
+h1{
+    font-size: 2em;
+    color: black;
+    line-height: 1.15em;
+    margin: 20px 0;
+}
+p{
+    line-height: 1.45em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* ----- HEADER & NAV ----- */
+header{
+    background: black;
+    width: 100%;
+    height: 76px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 4px solid darkred;
+    z-index: 100;
+}
+.current{color: darkred;}
+img#logo{
+    float: left;
+    width: 415px;
+    height: 70px;
+    display: block;
+}
+nav{float: right;padding: 20px;}
+#menu-icon{
+    display: hidden; /*none*/
+    width: 40px;
+    height: 40px;
+    background: darkred url('../img/menu-icon.png') center;
+}
+input#busqueda{
+    display: inline-block;
+    float:left;
+    margin:10px;
+}
+a:hover#menu-icon{background-color: whitesmoke;border-radius: 4px 4px 0 0;}
+img#banner{
+    width: 100%;
+}
+ul#nav-list li{
+    display: inline-block;
+    float: left;
+    padding: 10px;
+}
+
+/* ----- MAIN ----- */
+ol#lista_principal img:hover{box-shadow: 2px 2px 5px #999;}
+ol#lista_secundaria{text-align: center;}
+hr#separator{color:darkred;}
+section#welcome-content{
+    text-align:center;
+    padding: 0px;
+}
+section#welcome-content p{
+    text-align: center;
+    font-size: large;
+}
+
+/* ----- FOOTER ----- */
+footer{
+    text-align:center;
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    height: 150px;
+    border-top: 4px solid darkred;
+}
+p#copyright{
+    text-align:center;
+    line-height: 1.45em;
+}
+
+/* ----- MEDIA QUERY ----- (ESTO PARA EL MODO RESPONSIVE) */
+    @media only screen and (max-width: 1040px) and (min-width: 300px)
+    {
+        header{position: absolute;}
+        main section{margin:10px;}
+        #menu-icon{display:inline-block;}
+        #busqueda{display: none;}
+        img#logo{width: 100%;}
+        nav ul, nav:active ul{
+            display: none;
+            position: absolute;
+            padding: 20px;
+            background: black;
+            border: 5px solid darkred;
+            right: 20px;
+            top: 60px;
+            width: 50%;
+            border-radius: 4px 0 4px 4px;
+        }
+        nav li, input#busqueda{
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+            margin: 0;
+        }
+        nav:hover ul{display: block;}
+        section#welcome-content img{width: 100%;}
+        iframe#maps{width: 100%;}
+        footer{width: 100%;}
+    }
+/* ----- END MEDIA-QUERY ----- */
